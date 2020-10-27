@@ -15,5 +15,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+      - name: Show plugins
+        run: sbt plugins
       - name: Run compile
         run: sbt compile
