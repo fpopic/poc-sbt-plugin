@@ -1,4 +1,4 @@
-import sbt._
+import sbt.{addSbtPlugin, _}
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
@@ -25,8 +25,7 @@ lazy val root = (project in file("."))
     scriptedSettings,
     name := "poc-sbt-plugin",
     version := "0.0.1-SNAPSHOT",
-    scalaVersion := "2.12.12"
+    scalaVersion := "2.12.12",
+    addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.15.0")
   )
 
-
-// addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.15.0")
